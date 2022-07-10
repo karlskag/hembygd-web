@@ -50,6 +50,16 @@ export default function Home() {
           Den första söndagen i augusti anordnar föreningen sin årliga hembygdsdag. Den börjar med en utfärd till någon sevärdhet i socknen, och efter sedvanliga årsmötesförhandlingar kommer höjdpunkten, eftermiddagens hembygdsmöte, med inbjudna föredragshållare, musikunderhållning och kaffeservering.
         </p>
 
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '1.5rem' }}>
+            <img alt="Mötesbild 1" src="/images/meeting_1.png" height={400} width={'48%'} style={{ objectFit: 'cover' }} />
+            <img alt="Mötesbild 2" src="/images/meeting_2.png" height={400} width={'48%'} style={{ objectFit: 'cover' }} />
+          </div>
+          <p style={{ textAlign: 'center' }}>
+            Liten beskrivande text om bilderna, Liten beskrivande text om bilderna,
+          </p>
+        </div>
+
         <h2>Publikationer</h2>
         <p className={styles.description}>
           Matteröds hembygdsförening har gett ut ett par böcker:
