@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '1.5rem' }}>
+          <div className={styles.imageContainer}>
             <img alt="Mötesbild 1" src="/images/meeting_1.png" height={400} width={'48%'} style={{ objectFit: 'cover' }} />
             <img alt="Mötesbild 2" src="/images/meeting_2.png" height={400} width={'48%'} style={{ objectFit: 'cover' }} />
           </div>
