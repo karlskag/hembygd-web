@@ -1,3 +1,10 @@
+@value regularFontSize: 1.4rem;
+@value regularFontSizeMobile: 1.2rem;
+@value h1FontSize: 3rem;
+@value h1FontSizeMobile: 2rem;
+@value h2FontSize: 1.8rem;
+@value h2FontSizeMobile: 1.6rem;
+
 .container {
   padding: 0 20vw;
 }
@@ -5,16 +12,19 @@
 .container h2 {
   margin-top: 3rem;
   margin-bottom: 0;
+  font-size: h2FontSize;
 }
 
 .container h3 {
+  font-size: regularFontSize;
+  text-decoration: underline;
   margin-top: 2rem;
   margin-bottom: 0;
 }
 
 .container ul {
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: regularFontSize;
   margin: 0;
   padding-left: 1rem;
 }
@@ -38,8 +48,9 @@
   flex-direction: column;
 }
 
-.lineSpacer {
-  margin-bottom: 0.1rem;
+.link {
+  font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 .footer {
@@ -73,22 +84,14 @@
 .title {
   margin: 2rem 0 1rem 0;
   line-height: 1.15;
-  font-size: 3rem;
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 2rem;
-  }
-  .container {
-    padding: 0 10vw;
-  }
+  font-size: h1FontSize;
+  text-align: center;
 }
 
 .description {
   margin-bottom: 1rem;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: regularFontSize;
 }
 
 .spacedLines {
@@ -106,4 +109,25 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: h1FontSizeMobile;
+  }
+  .description {
+    font-size: regularFontSizeMobile;
+  }
+  .container {
+    padding: 0 10vw;
+  }
+  .container h2 {
+    font-size: h2FontSizeMobile;
+  }
+  .container h3 {
+    font-size: regularFontSizeMobile;
+  }
+  .container ul {
+    font-size: regularFontSizeMobile;
+  }
 }

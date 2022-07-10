@@ -1,5 +1,6 @@
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 const YearlyInvitation = () => {
   return (
@@ -11,7 +12,11 @@ const YearlyInvitation = () => {
       </Head>
 
       <main className={styles.main}>
-
+        <p className={styles.link}>
+          <Link href="/">
+            <a>{"< Till startsidan"}</a>
+          </Link>
+        </p>
         <h2>
           Inbjudan till hembygdsmöte söndagen den 7 augusti 2022 i Matteröd
         </h2>
@@ -33,18 +38,20 @@ const YearlyInvitation = () => {
           ÅRSHÖGTID i Maglehults Missionshus.
           <br/>
           Glada Getens Gårdsmejeri, Victoria & Henrik kommer och berättar om verksamheten och den kidnappade geten Getrud.
-          Musikmedverkan av Släktbandet,
-          dvs Anna, Bengt, Olof och Daniel
+          <br/>
+          Musikmedverkan av Släktbandet, dvs Anna, Bengt, Olof och Daniel
           <br/>
           Kaffeservering
         </p>
-        <h3>ALLA HJÄRTLIGT VÄLKOMNA!</h3>
         <p className={styles.description}>
-          MATTERÖDS HEMBYGDSFÖRENING
+          ALLA HJÄRTLIGT VÄLKOMNA!
           <br/>
-          Styrelsen genom:
-          <br/>
-          Daniel Johansson, tel. 0704-38 30 48, Elsie Henriksson, tel. 0451-533 91
+          Matteröds Hembygdsförening
+        </p>
+        <p className={styles.link}>
+          <Link href="/">
+            <a>{"< Till startsidan"}</a>
+          </Link>
         </p>
       </main>
       <footer className={styles.footer}>

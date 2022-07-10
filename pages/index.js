@@ -8,14 +8,16 @@ export default function Home() {
       <Head>
         <title>Matteröds Hembygdsförening</title>
         <meta name="description" content="Matteröds Hembygdsförenings hemsida" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
 
-        <h1 className={styles.title}>
-          Matteröds Hembygdsförening
-        </h1>
+        <div style={{ paddingBottom: '0.5rem', borderBottom: '1px solid #eaeaea' }}>
+          <h1 className={styles.title}>
+            Matteröds Hembygdsförening
+          </h1>
+        </div>
 
         <h2>Aktuellt</h2>
         <div style={{paddingTop: '1rem'}}>
@@ -28,7 +30,9 @@ export default function Home() {
           </ul>
         </div>
 
-        <h2>Om föreningen</h2>
+        <div>
+          <h2>Om föreningen</h2>
+        </div>
         <p className={styles.description}>
           Matteröds hembygdsförening bildades 1921, och de första medlemmarna hade anknytning till missionsförsamlingen i Maglehult-Matteröd. Eftersom flera av dem var utflyttade, ville man på detta sätt hålla kontakten med varandra och med hemsocknen.
         </p>
