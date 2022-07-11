@@ -65,8 +65,8 @@ export default function Home() {
 
         <div>
           <div className={styles.imageContainer}>
-            <Image url={'/images/meeting_1.png'} alt={'Mötesbild 1'} />
-            <Image url={'/images/meeting_2.png'} alt={'Mötesbild 2'} />
+            <Image url={'/images/meeting_1.jpg'} alt={'Mötesbild 1'} />
+            <Image url={'/images/meeting_2.jpg'} alt={'Mötesbild 2'} />
           </div>
           <p>
             Bilderna visar delar av styrelsen (fr. v. Maj-Lis Risberg, Elsie Henriksson, Kurt Henriksson, Bo Nilsson och Daniel Johansson),
