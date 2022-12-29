@@ -27,8 +27,13 @@ export default function Home() {
         <div style={{paddingTop: '1rem'}}>
           <ul>
             <li>
-              <Link href="/inbjudan/2022">
-                <a>Inbjudan till hembygdsmöte söndagen den 7 augusti 2022 i Matteröd</a>
+              <Link href="/bli-medlem">
+                <a>Bli medlem</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/documents/stadgar-220807.pdf">
+                <a>Hembygdsföreningens stadgar 2022-08-07</a>
               </Link>
             </li>
           </ul>
