@@ -31,7 +31,7 @@ const YearlyInvitation = () => {
         </p>
         <h3>Kl 13.30</h3>
         <p className={styles.description}>
-          ÅRSMÖTE i Maglehults Missionshus. Sedvanliga årsmötesförhandlingar enligt stadgarna.
+          ÅRSMÖTE i Matteröds församlingshem. Sedvanliga årsmötesförhandlingar enligt stadgarna.
         </p>
         <h3>Kl 14.30</h3>
         <p className={styles.description}>
