@@ -50,7 +50,7 @@ const Membership = () => {
         </p>
       </main>
       <footer className={styles.footer}>
-        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Elsie Henriksson, tel. 0451-533 91
+        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Majvi Larsson, tel. 076-584 04 43
       </footer>
     </div>
   )

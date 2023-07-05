@@ -27,6 +27,11 @@ export default function Home() {
         <div style={{paddingTop: '1rem'}}>
           <ul>
             <li>
+              <Link href="/inbjudan/2023">
+                <a>Inbjudan till hembygdsmöte söndagen den 6 augusti 2023 i Matteröd</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/bli-medlem">
                 <a>Bli medlem</a>
               </Link>
@@ -92,7 +97,7 @@ export default function Home() {
         <p className={`${styles.description} ${styles.spacedLines}`}>
           <strong>Daniel Johansson</strong>, 0704-383048, <a href = "mailto: nedjson@gmail.com">nedjson@gmail.com</a>
           <br/>
-          <strong>Elsie Henriksson</strong>, 0451-53391, <a href = "mailto: kurt.matterod@gmail.com">kurt.matterod@gmail.com</a>
+          <strong>Majvi Larsson</strong>, 076-5840443, <a href = "mailto: majvi@accessdenied.nu">majvi@accessdenied.nu</a>
         </p>
 
         <h2 id="find">Hitta hit</h2>
@@ -110,7 +115,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Elsie Henriksson, tel. 0451-533 91
+        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Majvi Larsson, tel. 076-584 04 43
       </footer>
     </div>
   )

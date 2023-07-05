@@ -18,16 +18,16 @@ const YearlyInvitation = () => {
           </Link>
         </p>
         <h2>
-          Inbjudan till hembygdsmöte söndagen den 7 augusti 2022 i Matteröd
+          Inbjudan till hembygdsmöte söndagen den 6 augusti 2023 i Matteröd
         </h2>
         <h3>Kl 10.00</h3>
         <p className={styles.description}>
-          Vi träffas i Matteröd-Svenstorp hemma hos Ingela och Per Kreutz.
+          Vi träffas i Knutstorp hemma hos Kristin Jönsson och hennes syster Helen Ek.
           <br/>
-          Kör vägen Tyringe – Norra Rörum. Efter ca 5 km kör mot Sösdala ca 3 km,
-          Ingela och Per berättar om sin 200 år gamla gård.
-          Vi gör en kort vandring med guidning av Per.
-          Efteråt rekommenderas ett besök på Café Lövet i Myrarp som serverar kaffe med goda smörgåsar och kakor. Öppet för oss annars är cafèet stängt i sommar.
+          Kör vägen Matteröd – Brönnestad. Vid korsningen i Knutstorp - sväng vänster, skylt mot Skyrup.
+          Sedan är det den första gården på höger sida (Knutstorp 2891). Kristin och Helen berättar om gårdarna i Lilla Oberöd och sin släktforskning.
+          Tag med egen stol! Vi sitter ute i trädgården.
+          Efteråt serveras kaffe och smörgåsar i närbelägna Tostarps Pensionat till en kostnad av 75 kr/person.
         </p>
         <h3>Kl 13.30</h3>
         <p className={styles.description}>
@@ -35,11 +35,13 @@ const YearlyInvitation = () => {
         </p>
         <h3>Kl 14.30</h3>
         <p className={styles.description}>
-          ÅRSHÖGTID i Maglehults Missionshus.
+          ÅRSHÖGTID i Matteröds församlingshem.
           <br/>
-          Glada Getens Gårdsmejeri, Victoria & Henrik kommer och berättar om verksamheten och den kidnappade geten Getrud.
+          “Spelmän i Brönnestad och Matteröd” - Daniel Johansson berättar om sin
+
+          forskning om mer eller mindre bortglömda musikanter.
           <br/>
-          Musikmedverkan av Släktbandet, dvs Anna, Bengt, Olof och Daniel
+          Musikmedverkan av “Släkt och osläckt”, dvs Anna, Bengt, Olof, Daniel och Tove.
           <br/>
           Kaffeservering
         </p>
