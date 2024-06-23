@@ -27,8 +27,8 @@ export default function Home() {
         <div style={{paddingTop: '1rem'}}>
           <ul>
             <li>
-              <Link href="/inbjudan/2023">
-                <a>Inbjudan till hembygdsmöte söndagen den 6 augusti 2023 i Matteröd</a>
+              <Link href="/inbjudan/2024">
+                <a>Inbjudan till hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>
               </Link>
             </li>
             <li>
@@ -102,10 +102,10 @@ export default function Home() {
 
         <h2 id="find">Hitta hit</h2>
         <p className={styles.description}>
-          <a href="https://maps.app.goo.gl/VmGuG7ATF11aozdd7"> Länk till Google Maps</a>
+          <a href="https://maps.app.goo.gl/4J9C2hYs5h9nrRu47"> Länk till Google Maps</a>
         </p>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1657489178935!6m8!1m7!1s4Q2ijdjF9nZk7wIXSyuohA!2m2!1d56.09356789750282!2d13.61292766849063!3f295.8400949280658!4f3.5505055981682148!5f0.8534524604414567"
+          src="https://www.google.com/maps/embed?pb=!4v1719176670804!6m8!1m7!1s5bfw2wKh2eORryma7LAKXg!2m2!1d56.11301386768444!2d13.62786564693437!3f260.9540624019702!4f9.06008059848567!5f1.1638966841152951"
           width={'100%'}
           height="500"
           style={{ border: 0 }}
