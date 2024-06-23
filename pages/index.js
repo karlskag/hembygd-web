@@ -27,8 +27,8 @@ export default function Home() {
         <div style={{paddingTop: '1rem'}}>
           <ul>
             <li>
-              <Link href="/inbjudan/2023">
-                <a>Inbjudan till hembygdsmöte söndagen den 6 augusti 2023 i Matteröd</a>
+              <Link href="/inbjudan/2024">
+                <a>Inbjudan till hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>
               </Link>
             </li>
             <li>
