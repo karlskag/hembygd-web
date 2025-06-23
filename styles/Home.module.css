@@ -30,7 +30,7 @@
 }
 
 .container li {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .container a {
@@ -39,6 +39,10 @@
 
 .container a:hover {
   text-decoration: underline;
+}
+
+.container section {
+  margin-top: 3rem;
 }
 
 .main {
@@ -127,6 +131,46 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+.label {
+  font-size: regularFontSize;
+}
+
+.tabLabels {
+  display: flex;
+}
+
+.tabLabel {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: -1px;
+  background-color: #e7e7e7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tabLabel:first-child {
+  margin-right: -1px;
+}
+
+.tabLabel:hover {
+  text-decoration: underline;
+}
+
+.tabLabel.selected {
+  border-bottom: none;
+  margin-bottom: -1px;
+  background-color: white;
+  text-decoration: underline;
+}
+
+.tabContent {
+  border: 1px solid black;
+  padding: 40px 30px 20px 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 @media (max-width: 1000px) {
   .imageContainer {
     flex-direction: column;
@@ -164,5 +208,8 @@
   }
   .container ul {
     font-size: regularFontSizeMobile;
+  }
+  .label {
+    font-size: 1.1rem;
   }
 }
