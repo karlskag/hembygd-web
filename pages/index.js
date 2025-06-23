@@ -11,7 +11,8 @@ const TabContainer = ({ tabs }) => {
   return <div>
     <div className={styles.tabLabels}>
       {tabs.map(({ id, label }) =>
-        <span onClick={() => selectTab(id)} key={id} className={`${styles.label} ${styles.tabLabel} ${id === selectedTab ? styles.selected : undefined}`}>
+        <span onClick={() => selectTab(id)} key={id}
+              className={`${styles.label} ${styles.tabLabel} ${id === selectedTab ? styles.selected : undefined}`}>
           {label}
         </span>
       )}
@@ -43,41 +44,68 @@ export default function Home() {
           href="#contact">Kontakt</a> | <a href="#find">Hitta hit</a>
         </p>
 
-        <section>
-          <TabContainer
-            tabs={[{
-              id: 1,
-              label: 'Aktuellt',
-              content:
-                <ul>
-                  <li>
-                    <Link href="/referat/2024">
-                      <a>Referat från Hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/bli-medlem">
-                      <a>Bli medlem</a>
-                    </Link>
-                  </li>
-                </ul>,
-            }, {
-              id: 2,
-              label: 'Senaste dokument',
-              content: <ul>
-                <li>
-                  <Link href="documents/protokoll-2024.pdf">
-                    <a>Protokoll för årsmöte 4 augusti 2024</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/documents/stadgar-220807.pdf">
-                    <a>Hembygdsföreningens stadgar 2022-08-07</a>
-                  </Link>
-                </li>
-              </ul>,
-            }]}/>
-        </section>
+        {/*<TabContainer*/}
+        {/*  tabs={[{*/}
+        {/*    id: 1,*/}
+        {/*    label: 'Aktuellt',*/}
+        {/*    content:*/}
+        {/*      <ul>*/}
+        {/*        <li>*/}
+        {/*          <Link href="/referat/2024">*/}
+        {/*            <a>Referat från Hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>*/}
+        {/*          </Link>*/}
+        {/*        </li>*/}
+        {/*        <li>*/}
+        {/*          <Link href="/bli-medlem">*/}
+        {/*            <a>Bli medlem</a>*/}
+        {/*          </Link>*/}
+        {/*        </li>*/}
+        {/*      </ul>,*/}
+        {/*  }, {*/}
+        {/*    id: 2,*/}
+        {/*    label: 'Senaste dokument',*/}
+        {/*    content: <ul>*/}
+        {/*      <li>*/}
+        {/*        <Link href="documents/protokoll-2024.pdf">*/}
+        {/*          <a>Protokoll för årsmöte 4 augusti 2024</a>*/}
+        {/*        </Link>*/}
+        {/*      </li>*/}
+        {/*      <li>*/}
+        {/*        <Link href="/documents/stadgar-220807.pdf">*/}
+        {/*          <a>Hembygdsföreningens stadgar 2022-08-07</a>*/}
+        {/*        </Link>*/}
+        {/*      </li>*/}
+        {/*    </ul>,*/}
+        {/*  }]}/>*/}
+        <h2>Aktuellt</h2>
+        <div style={{paddingTop: '30px'}}>
+        <ul>
+          <li>
+            <Link href="/bli-medlem">
+              <a>Bli medlem</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/referat/2024">
+              <a>Referat från Hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>
+            </Link>
+          </li>
+        </ul>
+        </div>
+
+        <h4 className={styles.label} id="document">Dokument (öppnas som pdf)</h4>
+        <ul>
+          <li>
+            <Link href="documents/protokoll-2024.pdf">
+              <a>Protokoll för årsmöte 4 augusti 2024</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/documents/stadgar-220807.pdf">
+              <a>Hembygdsföreningens stadgar 2022-08-07</a>
+            </Link>
+          </li>
+        </ul>
 
         <h2 id="about">Om föreningen</h2>
         <p className={styles.description}>
