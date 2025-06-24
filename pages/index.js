@@ -40,7 +40,7 @@ export default function Home() {
           </h1>
         </div>
         <p className={styles.topMenu}>
-          <a href="#about">Om föreningen</a> | <a href="#publications">Publikationer</a> | <a
+          <Link href="/bli-medlem">Bli medlem</Link> | <a href="#about">Om föreningen</a> | <a href="#publications">Publikationer</a> | <a
           href="#contact">Kontakt</a> | <a href="#find">Hitta hit</a>
         </p>
 
@@ -81,13 +81,13 @@ export default function Home() {
         <div style={{paddingTop: '30px'}}>
         <ul>
           <li>
-            <Link href="/bli-medlem">
-              <a>Bli medlem</a>
+            <Link href="/inbjudan/2025">
+              <a>Inbjudan till Hembygdsdagen i Matteröd söndagen den 3 augusti 2025</a>
             </Link>
           </li>
           <li>
             <Link href="/referat/2024">
-              <a>Referat från Hembygdsdagen i Matteröd söndagen den 4 augusti 2024</a>
+              <a>Referat från Hembygdsdagen i Matteröd 2024</a>
             </Link>
           </li>
         </ul>
@@ -134,6 +134,24 @@ export default function Home() {
             Bilderna ovan visar en Ungdomsgrupp i Maglehult år 1905 (t.v.) samt en utflykt till hembygdsparken i Broby
             år 1938.
             Klicka på bilderna för att förstora.
+          </p>
+        </div>
+
+        <div>
+          <div className={styles.imageContainer}>
+            <Image fullWidth url={'/images/v-branners-skola.png'} alt={'V Bränners skola 1910'}/>
+          </div>
+          <p>
+            V Bränners skola 1910, klicka för att se hela bilden.
+          </p>
+        </div>
+
+        <div>
+          <div className={styles.imageContainer}>
+            <Image fullWidth url={'/images/matterods-skola.png'} alt={'Matteröds skola 1907'}/>
+          </div>
+          <p>
+            Matteröds skola 1907, klicka för att se hela bilden.
           </p>
         </div>
 
