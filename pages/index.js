@@ -82,12 +82,12 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/inbjudan/2025">
-              <a>Inbjudan till Hembygdsdagen i Matteröd söndagen den 3 augusti 2025</a>
+              Inbjudan till Hembygdsdagen i Matteröd söndagen den 3 augusti 2025
             </Link>
           </li>
           <li>
             <Link href="/referat/2024">
-              <a>Referat från Hembygdsdagen i Matteröd 2024</a>
+              Referat från Hembygdsdagen i Matteröd 2024
             </Link>
           </li>
         </ul>
@@ -97,12 +97,12 @@ export default function Home() {
         <ul>
           <li>
             <Link href="documents/protokoll-2024.pdf">
-              <a>Protokoll för årsmöte 4 augusti 2024</a>
+              Protokoll för årsmöte 4 augusti 2024
             </Link>
           </li>
           <li>
             <Link href="/documents/stadgar-220807.pdf">
-              <a>Hembygdsföreningens stadgar 2022-08-07</a>
+              Hembygdsföreningens stadgar 2022-08-07
             </Link>
           </li>
         </ul>
