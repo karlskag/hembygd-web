@@ -14,7 +14,7 @@ const YearlyInvitation = () => {
       <main className={styles.main}>
         <p className={styles.link}>
           <Link href="/">
-            <a>{"< Till startsidan"}</a>
+            {"< Till startsidan"}
           </Link>
         </p>
         <h2>
@@ -62,7 +62,7 @@ const YearlyInvitation = () => {
         </p>
         <p className={styles.link}>
           <Link href="/">
-            <a>{"< Till startsidan"}</a>
+            {"< Till startsidan"}
           </Link>
         </p>
       </main>
