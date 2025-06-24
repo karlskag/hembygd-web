@@ -1,6 +1,7 @@
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "../../src/components/Image";
 
 const YearlyInvitation = () => {
   return (
@@ -59,6 +60,17 @@ const YearlyInvitation = () => {
           <br/>
           Matteröds Hembygdsförening
         </p>
+
+        <div>
+          <div className={styles.imageContainer}>
+            <Image url={'/images/v-branners-skola.png'} alt={'V Bränners skola 1910'}/>
+            <Image url={'/images/matterods-skola.png'} alt={'Matteröds skola 1907'}/>
+          </div>
+          <p>
+            Bilderna ovan visar V Bränners skola 1910 (t.v.) samt Matteröds skola 1907.
+            Klicka på bilderna för att förstora.
+          </p>
+        </div>
 
         <p style={{ paddingBlockStart: 30 }}>
           <span style={{ marginBottom: '20px' }}>Medlemsavgift 2025</span>
