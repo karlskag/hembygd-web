@@ -61,6 +61,14 @@ const YearlyInvitation = () => {
           Matteröds Hembygdsförening
         </p>
 
+        <p style={{ paddingBlockStart: 10 }}>
+          <span style={{ marginBottom: '20px' }}>Medlemsavgift 2025</span>
+          <br/>
+          Styrelsen hoppas Du stöttar föreningen med ett fortsatt medlemskap.
+          <br/>
+          Medlemsavgiften frivillig (minst 50 kr) betalas till bankgiro 5120-8486. <span style={{ textDecoration: 'underline' }}>Glöm ej skriva namn!</span>
+        </p>
+
         <div>
           <div className={styles.imageContainer}>
             <Image url={'/images/v-branners-skola.png'} alt={'V Bränners skola 1910'}/>
@@ -71,14 +79,6 @@ const YearlyInvitation = () => {
             Klicka på bilderna för att förstora.
           </p>
         </div>
-
-        <p style={{ paddingBlockStart: 30 }}>
-          <span style={{ marginBottom: '20px' }}>Medlemsavgift 2025</span>
-          <br/>
-          Styrelsen hoppas Du stöttar föreningen med ett fortsatt medlemskap.
-          <br/>
-          Medlemsavgiften frivillig (minst 50 kr) betalas till bankgiro 5120-8486. <span style={{ textDecoration: 'underline' }}>Glöm ej skriva namn!</span>
-        </p>
 
         <p className={styles.link}>
           <Link href="/">
