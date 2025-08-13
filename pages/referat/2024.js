@@ -12,6 +12,12 @@ const YearlyStory = () => {
       </Head>
 
       <main className={styles.main}>
+        <div style={{ paddingBottom: '0.5rem', borderBottom: '1px solid #eaeaea' }}>
+          <h1 className={styles.title}>
+            Matteröds Hembygdsförening
+          </h1>
+        </div>
+
         <p className={styles.link}>
           <Link href="/">
             {"< Till startsidan"}
