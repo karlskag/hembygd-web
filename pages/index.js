@@ -92,8 +92,8 @@ export default function Home() {
         <h4 className={styles.label} id="document">Dokument (öppnas som pdf)</h4>
         <ul>
           <li>
-            <Link href="documents/protokoll-2024.pdf">
-              Protokoll för årsmöte 4 augusti 2024
+            <Link href="documents/protokoll-2025.pdf">
+              Protokoll för årsmöte 3 augusti 2025
             </Link>
           </li>
           <li>
