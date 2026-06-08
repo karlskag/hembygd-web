@@ -24,7 +24,7 @@ const Article = () => {
           </Link>
         </p>
         <h2>
-          Tågeröd - byn som lades i aska
+          Tågeröd - byn som lades i aska (Utflyktsmål 2026)
         </h2>
         <p className={styles.description}>
           Hembygdsföreningen har genom åren gjort besök i gamla Matteröds sockens olika byar. I år besöker vi Tågeröd.
