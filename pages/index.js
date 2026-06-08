@@ -82,6 +82,11 @@ export default function Home() {
         <div style={{ paddingTop: '30px' }}>
           <ul>
             <li>
+              <Link href="/artiklar/utflykt-2026">
+                UTFLYKTSMÅL 2026: Tågeröd - byn som lades i aska
+              </Link>
+            </li>
+            <li>
               <Link href="/referat/2025">
                 Referat från Hembygdsdagen i Matteröd 2025 - Bo Nilsson
               </Link>

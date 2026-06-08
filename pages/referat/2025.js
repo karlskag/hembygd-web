@@ -8,7 +8,7 @@ const YearlyStory = () => {
       <Head>
         <title>Matteröds Hembygdsförening</title>
         <meta name="description" content="Matteröds Hembygdsförenings hemsida"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/images/favicon.ico"/>
       </Head>
 
       <main className={styles.main}>
