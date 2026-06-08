@@ -34,7 +34,7 @@ const Article = () => {
           byasnickare, som i sin verkstad tillverkat många fina alster.
         </p>
         <p className={styles.description}>
-          Tågeröd har en intressant, och ganska väldokumenterad historia ända tillbaka till snapphanetiden, och den stora branden 1677, som ödelade hela byn. Kung Karl XI krävde trohetsed till honom och Sverige, och menade att det borde rensas upp i " illa kända nästen".
+          Tågeröd har en intressant, och ganska väldokumenterad historia ända tillbaka till snapphanetiden, och den stora branden 1677, som ödelade hela byn. Kung Karl XI krävde trohetsed till honom och Sverige, och menade att det borde rensas upp i &quot;illa kända nästen&quot;.
           Efter att Tågeröd hade lagts i aska, ville ingen bo här på 40 år.
           <br/>
           Om detta, och om gården vi besöker, kommer Bengt att berätta.
