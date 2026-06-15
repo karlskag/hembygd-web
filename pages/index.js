@@ -82,6 +82,11 @@ export default function Home() {
         <div style={{ paddingTop: '30px' }}>
           <ul>
             <li>
+              <Link href="/artiklar/sven-midgren-matterod">
+                Sven Midgren kommer till Matteröd!
+              </Link>
+            </li>
+            <li>
               <Link href="/artiklar/utflykt-2026">
                 UTFLYKTSMÅL 2026: Tågeröd - byn som lades i aska
               </Link>
