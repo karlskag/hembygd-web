@@ -82,8 +82,8 @@ export default function Home() {
         <div style={{ paddingTop: '30px' }}>
           <ul>
             <li>
-              <Link href="/artiklar/sven-midgren-matterod">
-                Sven Midgren kommer till Matteröd!
+              <Link href="/inbjudan/2026">
+                Inbjudan till Hembygdsdagen i Matteröd söndagen den 2 augusti 2026
               </Link>
             </li>
             <li>

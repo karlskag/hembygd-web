@@ -30,6 +30,17 @@ export default function Meetings() {
           Klicka på länkarna i listan nedan för att öppna sida eller dokument.
         </p>
 
+        <h2>2026</h2>
+        <div style={{ paddingTop: '30px' }}>
+          <ul>
+            <li>
+              <Link href="/inbjudan/2026">
+                Inbjudan 2026
+              </Link>
+            </li>
+          </ul>
+        </div>
+
         <h2>2025</h2>
         <div style={{ paddingTop: '30px' }}>
           <ul>
