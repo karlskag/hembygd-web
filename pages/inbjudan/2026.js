@@ -68,8 +68,18 @@ const YearlyInvitation = () => {
             <br/>
             På 1910-talet var Signe lärare i Västra Brännerna. Hon och familjen bodde då på skolan. Då hette hon
             Kjörling-Thelander i efternamn.
-            <br/>
-            <br/>
+          </p>
+        </p>
+        <div>
+          <div className={styles.imageContainer}>
+            <Image fullWidth url={'/images/skolbild-signe.png'} alt={'Västra Bränner skola hösten 1916'}/>
+          </div>
+          <p>
+            Västra Bränner skola hösten 1916, Signe som är lärarinnan på kortet. Klicka för att se hela bilden.
+          </p>
+        </div>
+        <p className={styles.description}>
+          <p>
             Sven kommer också att spela låtar ur Signes repertoar, solo och tillsammans med Släktbandet.
           </p>
           Musikmedverkan av “Släktbandet”, dvs Anna, Bengt, Olof, Daniel och Tove.
