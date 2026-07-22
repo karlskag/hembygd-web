@@ -146,9 +146,11 @@ export default function Home() {
         <div>
           <div className={styles.imageContainer}>
             <Image fullWidth url={'/images/v-branners-skola.png'} alt={'V Bränners skola 1910'}/>
+            <Image fullWidth url={'/images/skolbild-signe.png'} alt={'Västra Bränner skola hösten 1916'}/>
           </div>
           <p>
-            V Bränners skola 1910, klicka för att se hela bilden.
+            Bilder från V Bränners skola. År 1910 (t.v.) samt 1916 (t.h.) med Signe Willén (1884-1951) som lärare.
+            Klicka på bilderna för att förstora.
           </p>
         </div>
 
