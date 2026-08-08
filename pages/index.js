@@ -178,21 +178,28 @@ export default function Home() {
         {/*    </ul>,*/}
         {/*  }]}/>*/}
 
-        <h2>Aktuellt</h2>
-        <div style={{ paddingTop: '25px' }}>
-          <ul>
-            <li>
-              <Link href="/referat/2026">
-                Referat från Hembygdsdagen i Matteröd 2026 - Bo Nilsson
+        <section className={styles.newsSection} aria-labelledby="aktuellt-heading">
+          <div className={styles.newsHeader}>
+            <p className={styles.newsEyebrow}>Senaste nytt</p>
+            <h2 className={styles.newsHeading} id="aktuellt-heading">Aktuellt</h2>
+          </div>
+          <ul className={styles.newsList}>
+            <li className={styles.newsItem}>
+              <Link className={styles.newsLink} href="/referat/2026">
+                <span className={styles.newsMeta}>Referat · 2026</span>
+                <span className={styles.newsTitle}>Referat från Hembygdsdagen i Matteröd 2026 – Bo Nilsson</span>
+                <span className={styles.newsArrow} aria-hidden="true">→</span>
               </Link>
             </li>
-            <li>
-              <Link href="/artiklar/utflykt-2026">
-                UTFLYKTSMÅL 2026: Tågeröd - byn som lades i aska
+            <li className={styles.newsItem}>
+              <Link className={styles.newsLink} href="/artiklar/utflykt-2026">
+                <span className={styles.newsMeta}>Utflyktsmål · 2026</span>
+                <span className={styles.newsTitle}>Tågeröd – byn som lades i aska</span>
+                <span className={styles.newsArrow} aria-hidden="true">→</span>
               </Link>
             </li>
           </ul>
-        </div>
+        </section>
 
         <h4 className={styles.label} id="document">Dokument (öppnas som pdf)</h4>
         <ul>
