@@ -34,6 +34,11 @@ export default function Meetings() {
         <div style={{ paddingTop: '30px' }}>
           <ul>
             <li>
+              <Link href="/referat/2026">
+                Referat 2026
+              </Link>
+            </li>
+            <li>
               <Link href="/inbjudan/2026">
                 Inbjudan 2026
               </Link>

@@ -2,7 +2,16 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from '/src/components/Image'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const HERO_SLIDES = [
+  '/images/forsamlingshem_1.png',
+  '/images/kyrka_2.png',
+  '/images/forsamlingshem_2.png',
+  '/images/kyrka_1.png',
+]
+
+const HERO_SLIDE_COUNT = HERO_SLIDES.length
 
 const TabContainer = ({ tabs }) => {
   const [selectedTab, selectTab] = useState(tabs[0].id)
@@ -24,6 +33,21 @@ const TabContainer = ({ tabs }) => {
 }
 
 export default function Home() {
+  const [heroSlide, setHeroSlide] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setHeroSlide((currentSlide) => (currentSlide + 1) % HERO_SLIDE_COUNT)
+    }, 20000)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [heroSlide])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,16 +58,91 @@ export default function Home() {
 
       <main className={styles.main}>
 
-        <div style={{ paddingBottom: '0.5rem', borderBottom: '1px solid #eaeaea' }}>
-          <h1 className={styles.title}>
-            Matteröds Hembygdsförening
-          </h1>
-        </div>
-        <p className={styles.topMenu}>
-          <Link href="/bli-medlem">Bli medlem</Link> | <a href="#about">Om föreningen</a> | <a
-          href="#publications">Publikationer</a> | <Link href="/meetings">Årsmöten</Link> | <a
-          href="#contact">Kontakt</a> | <a href="#find">Hitta hit</a>
-        </p>
+        <header className={styles.hero} aria-labelledby="page-title">
+          <div className={styles.heroSlides} aria-hidden="true">
+            {HERO_SLIDES.map((imageUrl, slideIndex) => (
+              <div
+                key={imageUrl}
+                className={`${styles.heroSlide} ${heroSlide === slideIndex ? styles.heroSlideActive : ''}`}
+                style={{ backgroundImage: `url('${imageUrl}')` }}
+              />
+            ))}
+          </div>
+          <div className={styles.heroControls} role="group" aria-label="Bildspel">
+            <button
+              type="button"
+              className={styles.heroArrow}
+              aria-label="Föregående bild"
+              onClick={() => setHeroSlide((currentSlide) => (currentSlide - 1 + HERO_SLIDE_COUNT) % HERO_SLIDE_COUNT)}
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+            {HERO_SLIDES.map((imageUrl, slideIndex) => (
+              <button
+                type="button"
+                key={imageUrl}
+                className={`${styles.heroBullet} ${heroSlide === slideIndex ? styles.heroBulletActive : ''}`}
+                aria-label={`Visa bild ${slideIndex + 1}`}
+                aria-current={heroSlide === slideIndex ? 'true' : undefined}
+                onClick={() => setHeroSlide(slideIndex)}
+              />
+            ))}
+            <button
+              type="button"
+              className={styles.heroArrow}
+              aria-label="Nästa bild"
+              onClick={() => setHeroSlide((currentSlide) => (currentSlide + 1) % HERO_SLIDE_COUNT)}
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>Sedan 1921</p>
+            <h1 className={styles.heroTitle} id="page-title">
+              Matteröds Hembygdsförening
+            </h1>
+          </div>
+        </header>
+        <nav className={styles.primaryNav} aria-label="Huvudnavigation">
+          <button
+            type="button"
+            className={styles.mobileNavToggle}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="primary-navigation-links"
+            onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+          >
+            <span>Meny</span>
+            <span
+              className={`${styles.mobileNavChevron} ${mobileMenuOpen ? styles.mobileNavChevronOpen : ''}`}
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </button>
+          <ul
+            className={`${styles.primaryNavList} ${mobileMenuOpen ? styles.primaryNavListOpen : ''}`}
+            id="primary-navigation-links"
+          >
+            <li className={styles.primaryNavItem}>
+              <Link className={styles.primaryNavLink} href="/bli-medlem" onClick={() => setMobileMenuOpen(false)}>Bli medlem</Link>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#about" onClick={() => setMobileMenuOpen(false)}>Om föreningen</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#publications" onClick={() => setMobileMenuOpen(false)}>Publikationer</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <Link className={styles.primaryNavLink} href="/meetings" onClick={() => setMobileMenuOpen(false)}>Årsmöten</Link>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#contact" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#find" onClick={() => setMobileMenuOpen(false)}>Hitta hit</a>
+            </li>
+          </ul>
+        </nav>
 
         {/*<TabContainer*/}
         {/*  tabs={[{*/}
@@ -79,21 +178,28 @@ export default function Home() {
         {/*    </ul>,*/}
         {/*  }]}/>*/}
 
-        <h2>Aktuellt</h2>
-        <div style={{ paddingTop: '25px' }}>
-          <ul>
-            <li>
-              <Link href="/referat/2026">
-                Referat från Hembygdsdagen i Matteröd 2026 - Bo Nilsson
+        <section className={styles.newsSection} aria-labelledby="aktuellt-heading">
+          <div className={styles.newsHeader}>
+            <p className={styles.newsEyebrow}>Senaste nytt</p>
+            <h2 className={styles.newsHeading} id="aktuellt-heading">Aktuellt</h2>
+          </div>
+          <ul className={styles.newsList}>
+            <li className={styles.newsItem}>
+              <Link className={styles.newsLink} href="/referat/2026">
+                <span className={styles.newsMeta}>Referat · 2026</span>
+                <span className={styles.newsTitle}>Referat från Hembygdsdagen i Matteröd 2026 – Bo Nilsson</span>
+                <span className={styles.newsArrow} aria-hidden="true">→</span>
               </Link>
             </li>
-            <li>
-              <Link href="/artiklar/utflykt-2026">
-                UTFLYKTSMÅL 2026: Tågeröd - byn som lades i aska
+            <li className={styles.newsItem}>
+              <Link className={styles.newsLink} href="/artiklar/utflykt-2026">
+                <span className={styles.newsMeta}>Utflyktsmål · 2026</span>
+                <span className={styles.newsTitle}>Tågeröd – byn som lades i aska</span>
+                <span className={styles.newsArrow} aria-hidden="true">→</span>
               </Link>
             </li>
           </ul>
-        </div>
+        </section>
 
         <h4 className={styles.label} id="document">Dokument (öppnas som pdf)</h4>
         <ul>
