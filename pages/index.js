@@ -78,22 +78,18 @@ export default function Home() {
         {/*      </li>*/}
         {/*    </ul>,*/}
         {/*  }]}/>*/}
+
         <h2>Aktuellt</h2>
-        <div style={{ paddingTop: '30px' }}>
+        <div style={{ paddingTop: '25px' }}>
           <ul>
             <li>
-              <Link href="/inbjudan/2026">
-                Inbjudan till Hembygdsdagen i Matteröd söndagen den 2 augusti 2026
+              <Link href="/referat/2026">
+                Referat från Hembygdsdagen i Matteröd 2026 - Bo Nilsson
               </Link>
             </li>
             <li>
               <Link href="/artiklar/utflykt-2026">
                 UTFLYKTSMÅL 2026: Tågeröd - byn som lades i aska
-              </Link>
-            </li>
-            <li>
-              <Link href="/referat/2025">
-                Referat från Hembygdsdagen i Matteröd 2025 - Bo Nilsson
               </Link>
             </li>
           </ul>

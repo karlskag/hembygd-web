@@ -1,12 +1,12 @@
 @value regularFontSize: 1.4rem;
-@value regularFontSizeMobile: 1.2rem;
+@value regularFontSizeMobile: 1rem;
 @value h1FontSize: 3rem;
-@value h1FontSizeMobile: 2rem;
+@value h1FontSizeMobile: 1.8rem;
 @value h2FontSize: 1.8rem;
-@value h2FontSizeMobile: 1.6rem;
+@value h2FontSizeMobile: 1.4rem;
 
 .container {
-  padding: 0 20vw;
+  padding: 0 15vw;
 }
 
 .container h2 {
@@ -176,6 +176,18 @@
   width: 48%;
 }
 
+.coloredContainer {
+  padding: 20px 30px;
+  margin: 0 -30px;
+  background-color: #F3F4F6;
+  border-radius: 10px;
+}
+
+.coloredContainer h2 {
+  margin: 0;
+  margin-top: 16px;
+}
+
 @media (max-width: 1000px) {
   .imageContainer {
     flex-direction: column;
@@ -214,5 +226,9 @@
   }
   .label {
     font-size: 1.1rem;
+  }
+  .coloredContainer {
+    margin: 0 -10vw;
+    border-radius: 0;
   }
 }
