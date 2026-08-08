@@ -58,9 +58,74 @@
   margin-bottom: 0;
 }
 
-.topMenu {
-  text-align: center;
-  line-height: 1.5;
+.primaryNav {
+  margin: 0 -15vw;
+  padding: 0.7rem max(15vw, 2rem);
+  border-bottom: 1px solid #dedbd2;
+  background: #f7f5ef;
+  box-shadow: 0 5px 16px rgb(35 31 25 / 0.06);
+}
+
+.mobileNavToggle {
+  display: none;
+}
+
+.container .primaryNavList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem clamp(0.5rem, 1.4vw, 1.4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+  line-height: 1.2;
+}
+
+.container .primaryNavItem {
+  padding: 0;
+}
+
+.primaryNav .primaryNavLink {
+  display: block;
+  position: relative;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.35rem;
+  color: #34372f;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.primaryNavLink::after {
+  content: '';
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.3rem;
+  left: 0.75rem;
+  height: 2px;
+  background: #986044;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 160ms ease;
+}
+
+.primaryNav .primaryNavLink:hover,
+.primaryNav .primaryNavLink:focus-visible {
+  color: #713f2b;
+  background: rgb(152 96 68 / 0.08);
+  text-decoration: none;
+}
+
+.primaryNavLink:hover::after,
+.primaryNavLink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.primaryNavLink:focus-visible {
+  outline: 2px solid #986044;
+  outline-offset: 2px;
 }
 
 .footer {
@@ -91,6 +156,13 @@
 }
 
 .title {
+  margin: 2rem 0 1rem 0;
+  line-height: 1.15;
+  font-size: h1FontSize;
+  text-align: center;
+}
+
+.heroTitle {
   max-width: 13ch;
   margin: 0;
   color: #fff;
@@ -351,6 +423,9 @@
 
 @media (max-width: 600px) {
   .title {
+    font-size: h1FontSizeMobile;
+  }
+  .heroTitle {
     max-width: 100%;
     font-size: clamp(1.55rem, 8.5vw, 2.15rem);
     line-height: 1.05;
@@ -369,6 +444,66 @@
   }
   .container ul {
     font-size: regularFontSizeMobile;
+  }
+  .primaryNav {
+    margin: 0 -10vw;
+    padding: 0.55rem 10vw;
+  }
+  .mobileNavToggle {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dedbd2;
+    border-radius: 0.45rem;
+    color: #34372f;
+    background: rgb(255 255 255 / 0.72);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .mobileNavToggle:focus-visible {
+    outline: 2px solid #986044;
+    outline-offset: 2px;
+  }
+  .mobileNavChevron {
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 160ms ease;
+  }
+  .mobileNavChevronOpen {
+    transform: rotate(180deg);
+  }
+  .container .primaryNavList {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.55rem;
+    font-size: 0.95rem;
+  }
+  .container .primaryNavListOpen {
+    display: grid;
+  }
+  .container .primaryNavItem {
+    display: flex;
+  }
+  .primaryNav .primaryNavLink {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dedbd2;
+    border-radius: 0.45rem;
+    background: rgb(255 255 255 / 0.72);
+    text-align: center;
+  }
+  .primaryNavLink::after {
+    display: none;
   }
   .label {
     font-size: 1.1rem;
@@ -402,6 +537,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .heroSlide {
+    transition: none;
+  }
+  .mobileNavChevron {
     transition: none;
   }
 }

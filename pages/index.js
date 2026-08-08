@@ -34,6 +34,7 @@ const TabContainer = ({ tabs }) => {
 
 export default function Home() {
   const [heroSlide, setHeroSlide] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -97,16 +98,51 @@ export default function Home() {
           </div>
           <div className={styles.heroContent}>
             <p className={styles.heroEyebrow}>Sedan 1921</p>
-            <h1 className={styles.title} id="page-title">
+            <h1 className={styles.heroTitle} id="page-title">
               Matteröds Hembygdsförening
             </h1>
           </div>
         </header>
-        <p className={styles.topMenu}>
-          <Link href="/bli-medlem">Bli medlem</Link> | <a href="#about">Om föreningen</a> | <a
-          href="#publications">Publikationer</a> | <Link href="/meetings">Årsmöten</Link> | <a
-          href="#contact">Kontakt</a> | <a href="#find">Hitta hit</a>
-        </p>
+        <nav className={styles.primaryNav} aria-label="Huvudnavigation">
+          <button
+            type="button"
+            className={styles.mobileNavToggle}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="primary-navigation-links"
+            onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+          >
+            <span>Meny</span>
+            <span
+              className={`${styles.mobileNavChevron} ${mobileMenuOpen ? styles.mobileNavChevronOpen : ''}`}
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </button>
+          <ul
+            className={`${styles.primaryNavList} ${mobileMenuOpen ? styles.primaryNavListOpen : ''}`}
+            id="primary-navigation-links"
+          >
+            <li className={styles.primaryNavItem}>
+              <Link className={styles.primaryNavLink} href="/bli-medlem" onClick={() => setMobileMenuOpen(false)}>Bli medlem</Link>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#about" onClick={() => setMobileMenuOpen(false)}>Om föreningen</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#publications" onClick={() => setMobileMenuOpen(false)}>Publikationer</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <Link className={styles.primaryNavLink} href="/meetings" onClick={() => setMobileMenuOpen(false)}>Årsmöten</Link>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#contact" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+            </li>
+            <li className={styles.primaryNavItem}>
+              <a className={styles.primaryNavLink} href="#find" onClick={() => setMobileMenuOpen(false)}>Hitta hit</a>
+            </li>
+          </ul>
+        </nav>
 
         {/*<TabContainer*/}
         {/*  tabs={[{*/}
