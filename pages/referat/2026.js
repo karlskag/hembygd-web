@@ -72,6 +72,19 @@ const YearlyStory = () => {
           snickeriverkstad.
         </p>
 
+        <div>
+          <div className={styles.imageContainer}>
+            <Image
+              fullWidth
+              url={'/images/hembygdsdagen-2026-tagerod.png'}
+              alt={'Deltagare samlade utomhus under Hembygdsdagen 2026'}
+            />
+          </div>
+          <p>
+            Bengt Nilsson berättar om gården i Tågeröd (klicka för att förstora)
+          </p>
+        </div>
+
         <p className={styles.description}>
           Efter en välsmakande måltid på Tostarps pensionat blev det årsmöte i
           Matteröds församlingshem.
@@ -163,6 +176,19 @@ const YearlyStory = () => {
           paus för förtäring vid kaffebordet avslutade Släktbandet årets
           hembygdsdag med ytterligare musik.
         </p>
+
+        <div>
+          <div className={styles.imageContainer}>
+            <Image
+              fullWidth
+              url={'/images/hembygdsdagen-2026-slaktbandet.png'}
+              alt={'Släktbandet spelar för deltagarna under Hembygdsdagen 2026'}
+            />
+          </div>
+          <p>
+            Släktbandet tillsammans med Sven Midgren bjuder på underhållning (klicka för att förstora)
+          </p>
+        </div>
 
         <p className={styles.description}>
           Referent: Bo Nilsson
