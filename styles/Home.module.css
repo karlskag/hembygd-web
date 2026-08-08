@@ -91,10 +91,148 @@
 }
 
 .title {
-  margin: 2rem 0 1rem 0;
-  line-height: 1.15;
-  font-size: h1FontSize;
-  text-align: center;
+  max-width: 13ch;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  text-shadow: 0 2px 20px rgb(0 0 0 / 0.35);
+}
+
+.hero {
+  min-height: clamp(23rem, 51vw, 38.5rem);
+  margin: 0 -15vw;
+  padding: clamp(2rem, 5vw, 5rem) max(15vw, 2rem);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: url('/images/forsamlingshem_1.png');
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    180deg,
+    rgb(10 17 19 / 0.04) 25%,
+    rgb(10 17 19 / 0.2) 58%,
+    rgb(10 17 19 / 0.6) 100%
+  );
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 70% 58% at 20% 88%,
+    rgb(9 15 17 / 0.82) 0%,
+    rgb(9 15 17 / 0.54) 42%,
+    transparent 76%
+  );
+}
+
+.heroSlides,
+.heroSlide {
+  position: absolute;
+  inset: 0;
+}
+
+.heroSlides {
+  z-index: -3;
+}
+
+.heroSlide {
+  opacity: 0;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 900ms ease-in-out;
+  will-change: opacity;
+}
+
+.heroSlideActive {
+  opacity: 1;
+}
+
+.heroControls {
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 999px;
+  background: rgb(9 15 17 / 0.26);
+  backdrop-filter: blur(4px);
+  transform: translateX(-50%);
+}
+
+.heroArrow,
+.heroBullet {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 0.62);
+  border-radius: 50%;
+  color: rgb(255 255 255 / 0.88);
+  background: rgb(255 255 255 / 0.08);
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.heroArrow {
+  width: 1.7rem;
+  height: 1.7rem;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.heroBullet {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+
+.heroArrow:hover,
+.heroArrow:focus-visible {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+.heroBulletActive {
+  border-color: #d8c39a;
+  background-color: #d8c39a;
+  transform: scale(1.12);
+}
+
+.heroArrow:focus-visible,
+.heroBullet:focus-visible {
+  outline: 2px solid #d8c39a;
+  outline-offset: 3px;
+}
+
+.heroContent {
+  width: min(100%, 60rem);
+  position: relative;
+}
+
+.heroEyebrow {
+  margin: 0 0 0.75rem;
+  color: rgb(255 255 255 / 0.9);
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .description {
@@ -205,9 +343,17 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .hero {
+    min-height: clamp(44rem, 45vw, 56rem);
+  }
+}
+
 @media (max-width: 600px) {
   .title {
-    font-size: h1FontSizeMobile;
+    max-width: 100%;
+    font-size: clamp(1.55rem, 8.5vw, 2.15rem);
+    line-height: 1.05;
   }
   .description {
     font-size: regularFontSizeMobile;
@@ -230,5 +376,32 @@
   .coloredContainer {
     margin: 0 -10vw;
     border-radius: 0;
+  }
+  .hero {
+    min-height: 22rem;
+    margin: 0 -10vw;
+    padding: 2rem 10vw;
+    background-position: 56% bottom;
+    background-size: cover;
+  }
+  .heroSlides {
+    display: none;
+  }
+  .heroControls {
+    display: none;
+  }
+  .hero::after {
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgb(9 15 17 / 0.76) 76%,
+      rgb(9 15 17 / 0.9) 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroSlide {
+    transition: none;
   }
 }

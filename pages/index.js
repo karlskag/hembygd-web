@@ -2,7 +2,16 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from '/src/components/Image'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const HERO_SLIDES = [
+  '/images/forsamlingshem_1.png',
+  '/images/kyrka_2.png',
+  '/images/forsamlingshem_2.png',
+  '/images/kyrka_1.png',
+]
+
+const HERO_SLIDE_COUNT = HERO_SLIDES.length
 
 const TabContainer = ({ tabs }) => {
   const [selectedTab, selectTab] = useState(tabs[0].id)
@@ -24,6 +33,20 @@ const TabContainer = ({ tabs }) => {
 }
 
 export default function Home() {
+  const [heroSlide, setHeroSlide] = useState(0)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setHeroSlide((currentSlide) => (currentSlide + 1) % HERO_SLIDE_COUNT)
+    }, 20000)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [heroSlide])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,11 +57,51 @@ export default function Home() {
 
       <main className={styles.main}>
 
-        <div style={{ paddingBottom: '0.5rem', borderBottom: '1px solid #eaeaea' }}>
-          <h1 className={styles.title}>
-            Matteröds Hembygdsförening
-          </h1>
-        </div>
+        <header className={styles.hero} aria-labelledby="page-title">
+          <div className={styles.heroSlides} aria-hidden="true">
+            {HERO_SLIDES.map((imageUrl, slideIndex) => (
+              <div
+                key={imageUrl}
+                className={`${styles.heroSlide} ${heroSlide === slideIndex ? styles.heroSlideActive : ''}`}
+                style={{ backgroundImage: `url('${imageUrl}')` }}
+              />
+            ))}
+          </div>
+          <div className={styles.heroControls} role="group" aria-label="Bildspel">
+            <button
+              type="button"
+              className={styles.heroArrow}
+              aria-label="Föregående bild"
+              onClick={() => setHeroSlide((currentSlide) => (currentSlide - 1 + HERO_SLIDE_COUNT) % HERO_SLIDE_COUNT)}
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+            {HERO_SLIDES.map((imageUrl, slideIndex) => (
+              <button
+                type="button"
+                key={imageUrl}
+                className={`${styles.heroBullet} ${heroSlide === slideIndex ? styles.heroBulletActive : ''}`}
+                aria-label={`Visa bild ${slideIndex + 1}`}
+                aria-current={heroSlide === slideIndex ? 'true' : undefined}
+                onClick={() => setHeroSlide(slideIndex)}
+              />
+            ))}
+            <button
+              type="button"
+              className={styles.heroArrow}
+              aria-label="Nästa bild"
+              onClick={() => setHeroSlide((currentSlide) => (currentSlide + 1) % HERO_SLIDE_COUNT)}
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>Sedan 1921</p>
+            <h1 className={styles.title} id="page-title">
+              Matteröds Hembygdsförening
+            </h1>
+          </div>
+        </header>
         <p className={styles.topMenu}>
           <Link href="/bli-medlem">Bli medlem</Link> | <a href="#about">Om föreningen</a> | <a
           href="#publications">Publikationer</a> | <Link href="/meetings">Årsmöten</Link> | <a
