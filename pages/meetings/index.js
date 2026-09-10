@@ -43,6 +43,11 @@ export default function Meetings() {
                 Inbjudan 2026
               </Link>
             </li>
+            <li>
+              <Link href="/documents/protokoll-2026.pdf">
+                Protokoll 2026 (öppnas som pdf)
+              </Link>
+            </li>
           </ul>
         </div>
 
