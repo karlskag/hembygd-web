@@ -1,6 +1,7 @@
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
 import Link from "next/link";
+import ContactFooter from "../../src/components/Contact";
 
 const YearlyStory = () => {
   return (
@@ -91,9 +92,7 @@ const YearlyStory = () => {
           </Link>
         </p>
       </main>
-      <footer className={styles.footer}>
-        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Majvi Larsson, tel. 076-584 04 43
-      </footer>
+      <ContactFooter/>
     </div>
   )
 }
