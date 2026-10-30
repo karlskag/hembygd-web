@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from '/src/components/Image'
+import ContactFooter, { ContactDetails } from '../src/components/Contact'
 import { useEffect, useState } from "react";
 
 const HERO_SLIDES = [
@@ -266,7 +267,8 @@ export default function Home() {
         </div>
 
         <p className={styles.description}>
-          Hembygdsföreningen har alltjämt hållit sina möten i Maglehults missionshus.
+          Tidigare hölls hembygdsmötena i Maglehults missionshus. Sedan missionshuset upplåtits till privatbostad har
+          mötet hållits i Matteröds församlingshem sedan några år tillbaka.
           Den första söndagen i augusti anordnar föreningen sin årliga hembygdsdag. Den börjar med en utfärd till någon
           sevärdhet i socknen, och efter sedvanliga årsmötesförhandlingar kommer höjdpunkten, eftermiddagens
           hembygdsmöte, med inbjudna föredragshållare, musikunderhållning och kaffeservering.
@@ -295,11 +297,7 @@ export default function Home() {
         </ul>
 
         <h2 id="contact">Kontakt</h2>
-        <p className={`${styles.description} ${styles.spacedLines}`}>
-          <strong>Daniel Johansson</strong>, 0704-383048, <a href="mailto: nedjson@gmail.com">nedjson@gmail.com</a>
-          <br/>
-          <strong>Majvi Larsson</strong>, 076-5840443, <a href="mailto: majvi@accessdenied.nu">majvi@accessdenied.nu</a>
-        </p>
+        <ContactDetails className={`${styles.description} ${styles.spacedLines}`}/>
 
         <h2 id="find">Hitta hit</h2>
         <p className={styles.description}>
@@ -315,9 +313,7 @@ export default function Home() {
           referrerPolicy="no-referrer-when-downgrade"/>
       </main>
 
-      <footer className={styles.footer}>
-        Styrelsen genom: Daniel Johansson, tel. 0704-38 30 48, Majvi Larsson, tel. 076-584 04 43
-      </footer>
+      <ContactFooter/>
     </div>
   )
 }
