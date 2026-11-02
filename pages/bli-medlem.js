@@ -35,7 +35,7 @@ const Membership = () => {
           som bor på annan ort genom en årlig ”hemvändardag”.
         </p>
         <p className={styles.description}>
-          Den årliga hembygdsdagen infaller första söndagen i augusti.
+          Den årliga hembygdsdagen infaller första lördagen i augusti.
           Dagen inleds med en utflykt i hembygden.
           Efter lunch följer årsmöte i Matteröds församlingshem
           med efterföljande underhållning och kaffeservering.
