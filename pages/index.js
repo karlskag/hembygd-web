@@ -269,7 +269,7 @@ export default function Home() {
         <p className={styles.description}>
           Tidigare hölls hembygdsmötena i Maglehults missionshus. Sedan missionshuset upplåtits till privatbostad har
           mötet hållits i Matteröds församlingshem sedan några år tillbaka.
-          Den första söndagen i augusti anordnar föreningen sin årliga hembygdsdag. Den börjar med en utfärd till någon
+          Den första lördagen i augusti anordnar föreningen sin årliga hembygdsdag. Den börjar med en utfärd till någon
           sevärdhet i socknen, och efter sedvanliga årsmötesförhandlingar kommer höjdpunkten, eftermiddagens
           hembygdsmöte, med inbjudna föredragshållare, musikunderhållning och kaffeservering.
         </p>
